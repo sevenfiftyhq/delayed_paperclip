@@ -50,7 +50,7 @@ module DelayedPaperclip
       only_process_default = paperclip_definitions[name][:only_process]
       only_process_default ||= []
       {
-        :priority => 0,
+        :priority => DelayedPaperclip.options[:priority] || 0,
         :only_process => only_process_default,
         :url_with_processing => DelayedPaperclip.options[:url_with_processing],
         :processing_image_url => DelayedPaperclip.options[:processing_image_url],
